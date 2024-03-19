@@ -1,0 +1,539 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6418615200553268023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2524327355187164022}
+  - component: {fileID: 2636342655085134059}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2524327355187164022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418615200553268023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2636342655085134059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418615200553268023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9d987e9ed2dc043a4c8db55efe46a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterMixer: {fileID: 24100000, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+  sounds:
+  - name: waveStart
+    clip: {fileID: 8300000, guid: 6059fb1579bd08243a86f43b47f1da1f, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: spawnerOpen
+    clip: {fileID: 8300000, guid: 3d7ae66938c701c4386577140216f034, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 3d7ae66938c701c4386577140216f034, type: 3}
+    - {fileID: 8300000, guid: 5e37d8a74cd576141a94f86f353af6e8, type: 3}
+    - {fileID: 8300000, guid: 06b2e3580d1cd844bb740c9f9c3df678, type: 3}
+    - {fileID: 8300000, guid: db60f18f91e2f554f9ed88cae58874f8, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.45
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: footsteps
+    clip: {fileID: 8300000, guid: 3b1df4000ffa48e42bb808ede16fd081, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.5
+    pitch: 0.8
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: shotgun
+    clip: {fileID: 8300000, guid: 3025934e0b32789449a0353f24edb3ed, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: pistol
+    clip: {fileID: 8300000, guid: ce7ad4a1bfb138e478a35a095a605fbd, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.3
+    pitch: 0.72
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: burst
+    clip: {fileID: 8300000, guid: 55403e5ac2a18b644b0076b0ff4b5ef8, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.241
+    pitch: 0.8
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: melee
+    clip: {fileID: 8300000, guid: 650ac71d4d67d9744ba876807152007f, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 30bac8f7784927942bb2c10626020f3c, type: 3}
+    - {fileID: 8300000, guid: 81106c60fb79d4b489487706b8141b94, type: 3}
+    - {fileID: 8300000, guid: 650ac71d4d67d9744ba876807152007f, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.45
+    pitch: 0.8
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: bullet_fall
+    clip: {fileID: 8300000, guid: 99d2a7e4ba5ef064493f7c2c2143f2ff, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 99d2a7e4ba5ef064493f7c2c2143f2ff, type: 3}
+    - {fileID: 8300000, guid: 28b37939cc765914587a94ec808a36b6, type: 3}
+    - {fileID: 8300000, guid: 7236ff90b6ff72b41aa9305763195cc3, type: 3}
+    - {fileID: 8300000, guid: 404289cacdc7ebb43b4e26f549d06b67, type: 3}
+    - {fileID: 8300000, guid: 661ed0af3f10882498b89f41981e0e9f, type: 3}
+    - {fileID: 8300000, guid: 79c441928ef1ea543bb121168962f5ac, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.116
+    pitch: 0.8
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: failed_shot
+    clip: {fileID: 8300000, guid: 79731c502569acc45b2bb507c62f263e, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.3
+    pitch: 0.8
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: get_weapon
+    clip: {fileID: 8300000, guid: af3455389cb9aa148a9a23f157a737e0, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.3
+    pitch: 0.8
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: ambient
+    clip: {fileID: 8300000, guid: 0019e876cba8df4458703b5abdad5238, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.197
+    pitch: 0.8
+    loop: 1
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: shotgun_pump
+    clip: {fileID: 8300000, guid: 7f89d732b4b0f424b82acb1810b5899e, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.4
+    pitch: 0.91
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: creaks
+    clip: {fileID: 8300000, guid: 4c9ade448418b1c4895ed170e60e0acd, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 4c9ade448418b1c4895ed170e60e0acd, type: 3}
+    - {fileID: 8300000, guid: e653ff1e659569848b7554ed7fdf34c8, type: 3}
+    - {fileID: 8300000, guid: 24de0ddb15b338646bde07362c4df8a4, type: 3}
+    - {fileID: 8300000, guid: a7c29a4f7f615fe49bc4ac7a8855a227, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.1
+    pitch: 0.91
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: enemyprojectile
+    clip: {fileID: 8300000, guid: b5875f49d9362e7449c664d9a1f0a42b, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: hit
+    clip: {fileID: 8300000, guid: 2e453451c33edf149950370c5fc8e6f4, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 2e453451c33edf149950370c5fc8e6f4, type: 3}
+    - {fileID: 8300000, guid: 21e616c8ba692cb47bf90316d5c4df49, type: 3}
+    - {fileID: 8300000, guid: 3aec4aa516ecbfa4db40a152db48e6ec, type: 3}
+    - {fileID: 8300000, guid: 2e453451c33edf149950370c5fc8e6f4, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.5
+    pitch: 0.92
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: death
+    clip: {fileID: 8300000, guid: b36d3487d93636e4884f1c989e941d82, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: go
+    clip: {fileID: 8300000, guid: fb33805be8471ec4488421be56a69858, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: fb33805be8471ec4488421be56a69858, type: 3}
+    - {fileID: 8300000, guid: d81a37484b5e46245a81150a7f70d8e3, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: thanks
+    clip: {fileID: 8300000, guid: c0b990d9aa3c90d478fa450dda36b71f, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 0bfbb2cfab56647408299bc0cc078fb6, type: 3}
+    - {fileID: 8300000, guid: c0b990d9aa3c90d478fa450dda36b71f, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.3
+    pitch: 1.05
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: win
+    clip: {fileID: 8300000, guid: 2feaa6faf251f8f4a90bcfe68206a8e9, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: bulletimpact
+    clip: {fileID: 8300000, guid: e79dc466f0d28c1469a4cc88291f4ecf, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 410b64aa1299faa43be3284cf45ff677, type: 3}
+    - {fileID: 8300000, guid: e4f8a328917b07a4aad222b0ccfbd872, type: 3}
+    - {fileID: 8300000, guid: e4f8a328917b07a4aad222b0ccfbd872, type: 3}
+    - {fileID: 8300000, guid: e9b1a4af55a53834f9a1ebd0220762fe, type: 3}
+    - {fileID: 8300000, guid: 61d8cacb0f47db04e8f6b9e57cebf76a, type: 3}
+    - {fileID: 8300000, guid: 9d8701d0b74b6f640a580b3aa7912273, type: 3}
+    - {fileID: 8300000, guid: 32271f4d498c33d4dbfcc5df3a9f6522, type: 3}
+    - {fileID: 8300000, guid: 3fd89e8bb3b11b14b9e25baaa448701f, type: 3}
+    - {fileID: 8300000, guid: f5de0ec990d085e4db5fe66b780cc509, type: 3}
+    - {fileID: 8300000, guid: d5cf0bca1f745ec4d9ba288091d1cf57, type: 3}
+    - {fileID: 8300000, guid: 232781b579ecca049ad09ad9149fb20f, type: 3}
+    - {fileID: 8300000, guid: 99f2a582806f51047a60eea98fc34cdc, type: 3}
+    - {fileID: 8300000, guid: 127f8c2187345334f8f04859b94144ff, type: 3}
+    - {fileID: 8300000, guid: 33134f0521c14e0459ad36eb47a00177, type: 3}
+    - {fileID: 8300000, guid: f65bcfa392c1eca4b87b049c8555bf6f, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.222
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: pet
+    clip: {fileID: 0}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.05
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: ambientHub
+    clip: {fileID: 8300000, guid: 0c78a27a58946f14ebe28f5b734ae6d4, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: rangedHit
+    clip: {fileID: 8300000, guid: 77ea15d6a32cadb4391dd30f325c27b7, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 77ea15d6a32cadb4391dd30f325c27b7, type: 3}
+    - {fileID: 8300000, guid: aa3d55d4effb04b4e83e42a92370df8c, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.25
+    pitch: 0.53
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: meleeHit
+    clip: {fileID: 8300000, guid: 77ea15d6a32cadb4391dd30f325c27b7, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 77ea15d6a32cadb4391dd30f325c27b7, type: 3}
+    - {fileID: 8300000, guid: aa3d55d4effb04b4e83e42a92370df8c, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: rangedAttack
+    clip: {fileID: 8300000, guid: adde1f20f2c754c44827056e112f39a1, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.1
+    pitch: 1.21
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: meleeAttack
+    clip: {fileID: 8300000, guid: 544bd2d29d21b2f44b35187fba19e41b, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: growl
+    clip: {fileID: 8300000, guid: 40f70ee999cb9ec46abc56604a0d114f, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: e7d8d5bd86acd4946ae1642b5d346dd1, type: 3}
+    - {fileID: 8300000, guid: 96bd3bbb9389fbf4ebb56ea59ac74a5a, type: 3}
+    - {fileID: 8300000, guid: 934f59d9d34fe474c9d78a0bde6d9a8e, type: 3}
+    - {fileID: 8300000, guid: 1b46e75e29f34004eb0fc6ca424071e9, type: 3}
+    - {fileID: 8300000, guid: 40f70ee999cb9ec46abc56604a0d114f, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: dogcry
+    clip: {fileID: 8300000, guid: df3147824fdf30845a2c53d52edaee82, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: dogpanting
+    clip: {fileID: 8300000, guid: e4b039145ba159145a9c3fb04840281b, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: themeHub
+    clip: {fileID: 8300000, guid: 5ce265ee040508d4eb89586bf87d1be2, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3728730489710062652, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: themeGame
+    clip: {fileID: 8300000, guid: 8e3a863003a9bfb4e91f4bd04d9eefb8, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3728730489710062652, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: storeAppear
+    clip: {fileID: 8300000, guid: 677639ae9dfd4b5429f75c2296d03c9a, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: photoUnlock
+    clip: {fileID: 8300000, guid: 2105102fa0c832d43908d7001798eb98, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: levelUnlock
+    clip: {fileID: 8300000, guid: aaee1024558829d4b92f5382a7a69ac9, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: dogcall
+    clip: {fileID: 8300000, guid: 95c351ad5ba773e4a8810c101d482594, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 95c351ad5ba773e4a8810c101d482594, type: 3}
+    - {fileID: 8300000, guid: 281f166b6d97f314f86156f8341ea44a, type: 3}
+    - {fileID: 8300000, guid: d502296d2a5c6734588b57534f8ade41, type: 3}
+    - {fileID: 8300000, guid: f99d329995184ae4bade9326812a7b1e, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: anxietyDeath
+    clip: {fileID: 8300000, guid: 826ce96299e26cd4c9efd63d58f4e4aa, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: anxietyExplode
+    clip: {fileID: 8300000, guid: cd68c9d0e43a27148b430070ce79ef6c, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: openbox
+    clip: {fileID: 8300000, guid: 9efbb02fd66ec834592f1595796805b4, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: bed
+    clip: {fileID: 8300000, guid: 67bda4d6dceb88741b6ebb7a355b436e, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 67bda4d6dceb88741b6ebb7a355b436e, type: 3}
+    - {fileID: 8300000, guid: 1493d8d125421944c9c03ba81f48d30c, type: 3}
+    - {fileID: 8300000, guid: 2ac78b70794524045954f8561fa3757f, type: 3}
+    - {fileID: 8300000, guid: ae0aff7c9d8e2c24b8e47bce7b0aab28, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: come
+    clip: {fileID: 8300000, guid: 3655e8d459cc7eb4bafd2a7dcdbe206a, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 42eb5e5c64579bf4188fd4801a1d41f1, type: 3}
+    - {fileID: 8300000, guid: 3655e8d459cc7eb4bafd2a7dcdbe206a, type: 3}
+    - {fileID: 8300000, guid: 2551622ec3d84ac49877826a37efda34, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: stay
+    clip: {fileID: 8300000, guid: 1c1b67fc894782448a7e7a186ed1bd1c, type: 3}
+    clipVariants:
+    - {fileID: 8300000, guid: 06eb3cc54c11b7b4abeab541b0897c17, type: 3}
+    - {fileID: 8300000, guid: 1c1b67fc894782448a7e7a186ed1bd1c, type: 3}
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: freeze
+    clip: {fileID: 8300000, guid: 50424b4cc7e09b0429c3813bc90a430a, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: angerAmbient
+    clip: {fileID: 8300000, guid: 687accb89a557a54f984d5ad4f7ad135, type: 3}
+    clipVariants: []
+    mixerGroup: {fileID: 3916240888089724797, guid: 87a6a8211e3dbc5458ffad4f239b7d22, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
